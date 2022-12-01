@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AutenticacionService } from './shared/servicios/autenticacion.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'proyecto';
+
+
+
+  constructor(private loginProd:AutenticacionService){
+
+  }
+
+
+  public visualizarMenu():boolean{
+    return this.loginProd.habilitarlogeo();
+  }
 }
+
