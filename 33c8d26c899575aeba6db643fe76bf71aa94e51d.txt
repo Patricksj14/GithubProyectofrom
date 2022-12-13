@@ -1,0 +1,25 @@
+
+  <form [formGroup]="myForm" (ngSubmit)="submitFormulario()" class="custom-from">
+    <div class="mb-3">
+      <div class="logo">
+        <img src="/Logo.jpg" alt="imagen">
+      </div>
+      <label for="exampleFormControlInput1" class="form-label-1">Correo</label>
+      <input formControlName="usuario" [class.is-invalid]="f.usuario.errors && f.usuario.touched" type="email" class="form-control" id="exampleFormControlInput1" placeholder="ingrese tu correo">
+      <div id="validationServerUsernameFeedback" class="invalid-feedback">
+        Usuario Obligatorio
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Contraseña</label>
+      <input formControlName="password" [class.is-invalid]="f.password.touched && f.password.errors"  type="password" class="form-control" id="exampleFormControlTextarea1" placeholder="Ingrese tu contraseña">
+      <div id="validationServerUsernameFeedback" class="invalid-feedback">
+        Contraseña  Obligatorio
+      </div>
+    </div>
+    <div class="container">
+      <button class="btn btn-success" id="boton">Ingresar</button>
+    </div>
+  </form >
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
